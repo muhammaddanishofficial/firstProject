@@ -1,0 +1,26 @@
+[
+    {
+        "name" : "Muhammad Danish",
+        "email" : "danish@gmail.com",
+        "age" : 21,
+        "city" : "Shikarpur"
+    },
+    {
+        "name" : "Muhammad Daniyal",
+        "email" : "daniyal@gmail.com",
+        "age" : 20,
+        "city" : "Shikarpur"
+    },
+    {
+        "name" : "Muhammad Haris",
+        "email" : "haris@gmail.com",
+        "age" : 18,
+        "city" : "Shikarpur"
+    },
+    {
+        "name" : "Muhammad Bilal",
+        "email" : "bilal@gmail.com",
+        "age" : 15,
+        "city" : "Shikarpur"
+    }
+]
