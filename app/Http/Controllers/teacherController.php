@@ -55,9 +55,9 @@ class teacherController extends Controller
 
     //Delete Perticular Record
     public function deleteRecord(string $id){
-        $deleteRecord=DB::table('teachers')->where('id',$id)->delete();
+        $delete=DB::table('teachers')->where('id',$id)->delete();
         
-        if($deleteRecord){
+        if($delete){
             return redirect()->route('home');
         }
     }
