@@ -15,7 +15,6 @@
             <h4>Vacancies:{{ $hostel->vacancies }}</h4>
             <h4>Phone:+92{{ $hostel->phone }}</h4>
         </div>
-        </a>
     @endforeach
 </body>
 </html>

@@ -10,13 +10,12 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {   if(!Schema::hasTable('students')){
-        Schema::create('students', function (Blueprint $table) {
+    {
+        Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->string('city');
             $table->timestamps();
         });
-    }
-        
     }
 
     /**
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('cities');
     }
 };

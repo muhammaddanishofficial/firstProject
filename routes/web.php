@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\users;
 use App\Http\Controllers\teacherController;
 use App\Http\Controllers\Categories\HostelController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,9 +33,15 @@ Route::View('/add','admin.forms.addHostel')->name('add'); //show hostel add form
 
 
 Route::controller(HostelController::class)->group(function(){
-    Route::get('/hostels','ShowAllHostels')->name('hostels');
-    Route::get('/hostel/{name}','ShowOneHostel')->name('hostel');
+    // Route::get('/hostels','ShowAllHostels')->name('hostels');
+    Route::get('/hostels/{city}/{slug}','ShowHostel')->name('hostel');
 });
+
+// Search Routes
+Route::controller(SearchController::class)->group(function(){
+    Route::get('/search','Search')->name('search');
+});
+Route::View('/','home')->name('home'); //show home page
 
 
 

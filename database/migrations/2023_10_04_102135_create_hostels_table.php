@@ -11,22 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if(!Schema::hasTable('teachers')){
+        if(!Schema::hasTable('hostels')){
             Schema::create('hostels', function (Blueprint $table) {
                 $table->id();
                 $table->string('hostel_name',50);
-                $table->string('city',30);
                 $table->integer('vacancies');
                 $table->integer('price');
                 $table->string('discription',500);
                 $table->string('address',100);
                 $table->bigInteger('phone');
                 $table->string('email')->unique();
+                $table->string('slug');
+                $table->unsignedBigInteger('category');
+                $table->unsignedBigInteger('city');
+                $table->foreign('category')->references('id')->on('categories');
+                $table->foreign('city')->references('id')->on('cities');
                 $table->timestamps();
             });
         }
     }
-
     /**
      * Reverse the migrations.
      */

@@ -17,10 +17,24 @@
                         <label class="form-label">Hostel Name</label>
                         <input type="text" class="form-control" name="hostelName">
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label class="form-label">City</label>
                         <input type="text" class="form-control" name="city">
-                    </div>
+                    </div> -->
+                    <label class="form-label">Category</label><br>
+                    <select name="category" class="mb-3" >
+                    <!-- Populate this dropdown with available categories -->
+                    <option value="1">Hostel</option>
+                    <option value="2">Hotels</option>
+                    <!-- Add more category options if needed -->
+                    </select><br>
+                    <label class="form-label">City</label><br>
+                    <select name="city" class="mb-3">
+                        <!-- Populate this dropdown with available cities -->
+                        <option value="1">Jamshoro</option>
+                        <option value="2">Hyderabad</option>
+                        <!-- Add more city options if needed -->
+                    </select>
                     <div class="mb-3">
                         <label class="form-label">Vacancies</label>
                         <input type="number" class="form-control" name="vacancies">
@@ -44,6 +58,10 @@
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input type="email" class="form-control" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Slug</label>
+                        <input type="slug" class="form-control" name="slug">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>

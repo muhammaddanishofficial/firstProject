@@ -12,13 +12,14 @@
         .card-container{
             margin:50px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+            grid-template-columns: repeat(4, 1fr); /* Create three equal columns */
             gap: 20px; /* Add some space between the cards */
         }
         .card{
             border: solid 1px black;
             width: 250px;
             height: 250px;
+            padding:20px;
         }
         h1{
             text-align:center;
@@ -38,17 +39,27 @@
 </head>
 <body>
 <h1>Hostels In Jamshoro</h1>
+
+<!-- <div class="form-group">
+    <label for="city">Select City:</label>
+    <select id="city" name="city" class="form-control">
+        <option value="Jamshoro">Jamshoro</option>
+        <option value="Hyderabad">Hyderabad</option>
+    </select>
+</div> -->
+
+
 <div class="card-container">
     @foreach($data as $id => $hostel)
-        <a href="{{ route('hostel',$hostel->hostel_name) }}">
-        <div class="card">
-            <h3>{{ $hostel->hostel_name }}</h3>
-            <h4>{{ $hostel->discription }}</h4>
-            <h4>City:{{ $hostel->city }}</h4>
-            <h4>Price:{{ $hostel->price }}</h4>
-            <h4>Vacancies:{{ $hostel->vacancies }}</h4>
-            <h4>Phone:+92{{ $hostel->phone }}</h4>
-        </div>
+    <a href="{{ route('hostel', ['city' => $hostel->city, 'slug' => $hostel->slug]) }}">
+            <div class="card">
+                <h3>{{ $hostel->hostel_name }}</h3>
+                <h4>{{ $hostel->discription }}</h4>
+                <h4>City:{{ $hostel->city }}</h4>
+                <h4>Price:{{ $hostel->price }}</h4>
+                <h4>Vacancies:{{ $hostel->vacancies }}</h4>
+                <h4>Phone:+92{{ $hostel->phone }}</h4>
+            </div>
         </a>
     @endforeach
 </div>

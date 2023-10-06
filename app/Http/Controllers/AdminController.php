@@ -24,13 +24,16 @@ class AdminController extends Controller
     public function AddHostel(Request $req){
         $add=DB::table('hostels')->insert([
             "hostel_name" => $req->hostelName,
-            "city" => $req->city,
+            // "city" => $req->city,
+            "category" => $req->input('category'),
+            "city" => $req->input('city'),
             "vacancies" => $req->vacancies,
             "price" => $req->price,
             "discription" => $req->discription,
             "address" => $req->address,
             "phone" => $req->phone,
             "email" => $req->email,
+            "slug" => $req->slug,
         ]);
         if($add){
             return redirect()->route('dashboard');

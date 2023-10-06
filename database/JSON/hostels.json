@@ -1,0 +1,28 @@
+[
+    {
+
+        "hostelName" : "Baloch Hostel",
+        "vacancies" :"30",
+        "price" :"12000",
+        "discription":"All Facilities", 
+        "address" :"SU Society Jamshoro",
+        "phone" :"03352996009",
+        "email" :"baloch@gmail.com",
+        "slug" :"balochboyshostel",
+        "category" :"1",
+        "city" :"1"
+    },
+    {
+
+        "hostelName" : "Chandio Hostel",
+        "vacancies" :"20",
+        "price" :"15000",
+        "discription":"All Facilities", 
+        "address" :"SU Society Jamshoro",
+        "phone" :"03352434943",
+        "email" :"chandio@gmail.com",
+        "slug" :"chandiohostel",
+        "category" :"1",
+        "city" :"2"
+    }
+]
